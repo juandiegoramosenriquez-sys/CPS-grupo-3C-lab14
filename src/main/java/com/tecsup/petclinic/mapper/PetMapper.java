@@ -24,20 +24,16 @@ public interface PetMapper {
 	Pet mapToEntity(PetDTO petTO);
 
     default Date stringToDate(String dateStr) {
-        System.out.println("Converting string to date: " + dateStr);
-
         if (dateStr == null || dateStr.isEmpty()) {
             return null;
         }
 
-        Date date = null;
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         try {
-            date = dateFormat.parse(dateStr);
+            return dateFormat.parse(dateStr);
         } catch (ParseException e) {
-            e.printStackTrace();
+            return null;
         }
-        return date;
 	}
 
 	@Mapping(source = "birthDate", target = "birthDate")
