@@ -18,6 +18,8 @@
 		<java.version>21</java.version>
 		<org.projectlombok.version>1.18.32</org.projectlombok.version>
 		<org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+		<sonar.projectKey>petclinic-grupo3</sonar.projectKey>
+		<sonar.projectName>PetClinic - Grupo 3</sonar.projectName>
 	</properties>
 
 	<dependencies>
